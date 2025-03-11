@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checky - URL Security Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 450px;
+      padding: 15px;
+    }
+    h1 {
+      font-size: 18px;
+      color: #4285f4;
+    }
+    .url-container {
+      margin: 15px 0;
+    }
+    .url-display {
+      word-break: break-all;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .copy-button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .copy-button:hover {
+      background-color: #3367d6;
+    }
+    .service-list {
+      margin-top: 15px;
+    }
+    .service {
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+    .instructions {
+      background-color: #fff8dc;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 15px 0;
+      border-left: 4px solid #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checky - URL Security Checker</h1>
+  
+  <div class="instructions">
+    <p><strong>Important:</strong> Some services require you to manually paste the URL. Use the copy button below to easily copy the URL to your clipboard.</p>
+  </div>
+  
+  <div class="url-container">
+    <p>URL being checked:</p>
+    <div class="url-display" id="url-display">Loading...</div>
+    <div id="copy-container"></div>
+  </div>
+  
+  <div class="service-list">
+    <h2>Security Services:</h2>
+    <div id="services-container"></div>
+  </div>
+  
+  <div class="footer">
+    <p>Multiple tabs have been opened to check this URL.</p>
+    <p>Review each service's results to determine if the URL is safe.</p>
+    <p>For services that require manual input, paste the URL and follow the service's instructions.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
